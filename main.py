@@ -17,38 +17,38 @@ codeSegment2 = random.randint(0,9)
 codeSegment3 = random.randint(0,9)
 code = int(str(codeSegment1) + str(codeSegment2) + str(codeSegment3))
 items = ["Door","Window","Backpack","Vase","Bucket","Painting","Jewelry Box","Rug","Mirror","Bookshelf"]
-locations = ["Fridge","Counter","Microwave", "Stove","Pantry","Window","Save and Exit"]
+locations = ["Fridge","Counter","Microwave", "Stove","Pantry","Window"]
 menu3items = ["Ladder","Bucket","Chair","Mattress","Carpet"]
 menu4items = ["Fence", "Gate", "Bike", "Rock", "Pot"]
 code1Location = random.randint(1,3)
 code2Location = random.randint(4,6)
 code3Location = random.randint(7,9)
-# intro()
-# while True:
-# 	choice = menu(items, "What do you want to inspect? ")
+intro()
+while True:
+	choice = menu(items, "What do you want to inspect? ")
 
-# 	if choice == 1:
-# 		Window(choice, code1Location, codeSegment1)
-# 	elif choice == 2:
-# 		Backpack(choice, code1Location, codeSegment1)
-# 	elif choice == 3:
-# 		Vase(choice, code1Location, codeSegment1)
-# 	elif choice == 4:
-# 		Bucket(choice, code2Location, codeSegment2)
-# 	elif choice == 5:
-# 		Painting(choice, code2Location, codeSegment2)
-# 	elif choice == 6:
-# 		JewelryBox(choice, code2Location, codeSegment2)
-# 	elif choice == 7:
-# 		Rug(choice, code3Location, codeSegment3)
-# 	elif choice == 8:
-# 		Mirror(choice, code3Location, codeSegment3)
-# 	elif choice == 9:
-# 		Bookshelf(choice, code3Location, codeSegment3)
-# 	else:
-# 		result = Door(code)
-# 		if result == 1:
-# 			break
+	if choice == 1:
+		Window(choice, code1Location, codeSegment1)
+	elif choice == 2:
+		Backpack(choice, code1Location, codeSegment1)
+	elif choice == 3:
+		Vase(choice, code1Location, codeSegment1)
+	elif choice == 4:
+		Bucket(choice, code2Location, codeSegment2)
+	elif choice == 5:
+		Painting(choice, code2Location, codeSegment2)
+	elif choice == 6:
+		JewelryBox(choice, code2Location, codeSegment2)
+	elif choice == 7:
+		Rug(choice, code3Location, codeSegment3)
+	elif choice == 8:
+		Mirror(choice, code3Location, codeSegment3)
+	elif choice == 9:
+		Bookshelf(choice, code3Location, codeSegment3)
+	else:
+		result = Door(code)
+		if result == 1:
+			break
 
 room1()
 while True:
@@ -68,8 +68,6 @@ while True:
 			break
 	elif choice == 5:
 		Window2(choice)
-	elif choice == 6:
-		mainmenu(choice)
 	else:
 		print("Type a number from 0-5")
 

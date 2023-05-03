@@ -24,7 +24,7 @@ def Stove(choice):
 def Pantry(choice, key):
 	print("")
 	if key:
-		print("You insert the key and the door opens! You realize it's not a pantry, but instead a set of stairs leading down. You start to descend.")
+		print("You insert the key and the door opens! You realize it's not a pantry, but instead a set of stairs leading down. You start to descend.\nYou look around and realize you are in a cellar.")
 		room2()
 	else:
 		print("")

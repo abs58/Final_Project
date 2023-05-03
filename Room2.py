@@ -1,7 +1,6 @@
 from Room3 import room3
 def room2():
 	print("")
-	print("You look around and realize you are in a cellar.")
 
 def ladder(choice):
 	print("")
