@@ -1,3 +1,9 @@
+def play():
+	print("To play the game enter 1!")
+	print("To exit enter 2!")
+	print("To see preexisting games enter 3!")
+
+
 def intro():
 	print("Last night, you went to sleep in your own home.")
 	print("Now, you wake up to an unfamiliar environement.")

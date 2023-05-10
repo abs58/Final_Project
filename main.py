@@ -1,7 +1,10 @@
 import random
 from Introduction import intro
+from Introduction import play
 from Room2 import room2
-from saving import load, save, mainmenu
+from save_pkl import save
+from save_pkl import load
+from save_pkl import new
 from Room2 import ladder, bucket, chair, mattress, carpet
 from Room3 import room3
 from Room3 import fence, gate, rock, bike, pot
@@ -16,13 +19,14 @@ codeSegment1 = random.randint(0,9)
 codeSegment2 = random.randint(0,9)
 codeSegment3 = random.randint(0,9)
 code = int(str(codeSegment1) + str(codeSegment2) + str(codeSegment3))
-items = ["Door","Window","Backpack","Vase","Bucket","Painting","Jewelry Box","Rug","Mirror","Bookshelf"]
-locations = ["Fridge","Counter","Microwave", "Stove","Pantry","Window"]
-menu3items = ["Ladder","Bucket","Chair","Mattress","Carpet"]
-menu4items = ["Fence", "Gate", "Bike", "Rock", "Pot"]
+items = ["Door","Window","Backpack","Vase","Bucket","Painting","Jewelry Box","Rug","Mirror","Bookshelf","Save"]
+locations = ["Fridge","Counter","Microwave", "Stove","Pantry","Window","Save"]
+menu3items = ["Ladder","Bucket","Chair","Mattress","Carpet","Save"]
+menu4items = ["Fence", "Gate", "Bike", "Rock", "Pot", "Save"]
 code1Location = random.randint(1,3)
 code2Location = random.randint(4,6)
 code3Location = random.randint(7,9)
+
 intro()
 while True:
 	choice = menu(items, "What do you want to inspect? ")
@@ -45,6 +49,9 @@ while True:
 		Mirror(choice, code3Location, codeSegment3)
 	elif choice == 9:
 		Bookshelf(choice, code3Location, codeSegment3)
+	elif choice == 10:
+		save('game')
+		break
 	else:
 		result = Door(code)
 		if result == 1:
@@ -68,6 +75,9 @@ while True:
 			break
 	elif choice == 5:
 		Window2(choice)
+	elif choice == 6:
+		save('game')
+		break
 	else:
 		print("Type a number from 0-5")
 
@@ -86,6 +96,9 @@ while True:
 		break
 	elif choice == 4:
 		carpet(choice)
+	elif choice == 5:
+		save('game')
+		break
 	else:
 		print("Type a number from 0-4")
 
@@ -105,5 +118,7 @@ while True:
 		key = rock(choice)
 	elif choice == 4:
 		pot(choice)
-
+	elif choice == 5:
+		save('game')
+		break
 	
