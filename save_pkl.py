@@ -1,16 +1,14 @@
 import pickle
 
-name = []
+file = [0,False]
 
-def save(game): 
-	with open('save_pkl.py', 'wb') as f:
-		pickle.dump(name, f)
-		print("Saved!")
+def save(room,key): 
+    with open('save.pickle', 'wb') as f:
+        file[0] = room
+        file[1] = key
+        pickle.dump(file, f)
+        print("Saved!")
 def load():
-	with open('save_pkl.py', 'wb') as f:
-		name = pickle.load(f)
-	print(name)
-
-def new():
-	name = input("Enter player's name:\n")
-	return game
+    with open('save.pickle', 'rb') as f:
+        file = pickle.load(f)
+        return file

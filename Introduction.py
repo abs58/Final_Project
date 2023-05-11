@@ -1,17 +1,19 @@
+from save_pkl import load
 def play():
 	print("To play the game enter 1!")
 	print("To exit enter 2!")
 	print("To see preexisting games enter 3!")
 
 
-def intro():
+def intro(room):
 	print("Last night, you went to sleep in your own home.")
 	print("Now, you wake up to an unfamiliar environement.")
 	print("As your eyes flutter open, darkness greets you. Your surroundings are unfamiliar to you.")
 	print("You are sitting on a bed, and a wall hugs your back. Beside you is a table, whose outline you can barely see.")
 	print("1 - to check under the bed")
 	print("2 - to check the table")
-	while True:
+	print("3 - load the game")
+	while True and room == 0:
 		bedOrWall = input()
 		try:
 			if int(bedOrWall) == 1:
@@ -22,10 +24,16 @@ def intro():
 				print("You check the table and find a lamp. With a loud click, your surroundings are illuminated.")
 				print("You also check under the bed and find a note.")
 				break
+			elif int(bedOrWall) == 3:
+				file = []
+				file = load()
+				room = file[0]
+				break
 			else:
-				print("Enter either 1 or 2:")
+				print("Enter either 1, 2 or 3:")
 		except:
-			print("Value must be whole number 1 or 2:")
+			print("Value must be whole number 1, 2 or 3:")
+	return room
 			
 	print("")
 	print("The note reads:")
